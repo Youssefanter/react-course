@@ -51,7 +51,14 @@ function Registry(){
             {
                 RegistryData.map((item,index)=>{
                     return(
-                        <li key={index}>{item} <Button type="button" className="btn btn-primary" onClick={()=>removeItem(index)}>Remove</Button><button type="button" className="btn btn-secondary" onClick={()=>EditItem(index)}>Update</button></li>
+                        <li key={index}>{item} 
+                        <button
+                         type="button" className="btn btn-primary" onClick={()=>removeItem(index)}>Remove
+                        </button>
+                        <button 
+                        type="button" className="btn btn-secondary" onClick={()=>EditItem(index)}>Update
+                        </button>
+                        </li>
                         
                     )
                 })
