@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 function Registry(){
     const [RegistryData,setRegistryData]=useState([])
@@ -50,7 +51,8 @@ function Registry(){
             {
                 RegistryData.map((item,index)=>{
                     return(
-                        <li key={index}>{item} <button onClick={()=>removeItem(index)}>Remove</button><button onClick={()=>EditItem(index)}>Update</button></li>
+                        <li key={index}>{item} <Button type="button" className="btn btn-primary" onClick={()=>removeItem(index)}>Remove</Button><button type="button" className="btn btn-secondary" onClick={()=>EditItem(index)}>Update</button></li>
+                        
                     )
                 })
             }
